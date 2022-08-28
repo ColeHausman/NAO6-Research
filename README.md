@@ -29,3 +29,7 @@
 3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
 4. cd into your worktree `/path/to/myWorktree`
 5. execute `qibuild add-config myconfig -t mytoolchain --default`
+
+## Confirm Setup
+Follow this tutorial to make sure everything was configured correctly: \
+https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step
