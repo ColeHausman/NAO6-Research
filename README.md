@@ -14,3 +14,18 @@
 6. Cmake should be found automatically, if not specify the path
 7. For Cmake generator specify **Unix Makefiles**
 8. Dont specify an IDE, completely unecessary
+
+## Initializing Worktree
+1. Create an empty folder ex: /path/to/myWorktree
+2. execute `qibuild init`
+3. **NOTE: The folder should remain empty**
+
+## NAOqi SDK Setup
+*the following requires you to have created a worktree folder if not see above step*
+1. Download the naoqi-sdk from https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac
+2. extract the folder and rename to **naoqi-sdk** \
+   ***Location of this folder does not matter*** \
+   *if a name other than naoqi-sdk is chosen, the following commands will need to be modified*
+3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
+4. cd into your worktree `/path/to/myWorktree`
+5. execute `qibuild add-config myconfig -t mytoolchain --default`
