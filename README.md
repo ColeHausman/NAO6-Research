@@ -25,7 +25,6 @@
 1. Download the naoqi-sdk from https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac
 2. extract the folder and rename to **naoqi-sdk** \
    ***Location of this folder does not matter*** \
-   *if a name other than naoqi-sdk is chosen, the following commands will need to be modified*
 3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
 4. cd into your worktree `/path/to/myWorktree`
 5. execute `qibuild add-config myconfig -t mytoolchain --default`
