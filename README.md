@@ -32,3 +32,7 @@
 ## Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
 https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step
+
+# ROBOT SETUP
+## Robot Settings for MacOS
+https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg (download on actual website doens't work so use this link which I found by making a deal with the documentation devil)
