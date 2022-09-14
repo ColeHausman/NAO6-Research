@@ -36,3 +36,7 @@ https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-s
 # ROBOT SETUP
 ## Robot Settings for MacOS
 https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg (download on actual website doens't work so use this link which I found by making a deal with the documentation devil)
+
+#Deploying Code \
+!!!Still yet to be tested !!!\
+`$ qibuild deploy <my_project> --url nao@nao.local:/home/nao/<my_project>`
