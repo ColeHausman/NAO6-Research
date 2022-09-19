@@ -62,5 +62,8 @@ target_include_directories([project name] PUBLIC "[path to sdk]/naoqi-sdk/includ
 ```
 The `-DBOOST_SYSTEM_NO_DEPRECATED` flag is necessary for compilation
 
-`brew install openssl`
-`brew install boost-python3`
+`brew install openssl`\
+`brew install boost-python3`\
+
+`brew upgrade openssl`\
+`brew link --force openssl`\
