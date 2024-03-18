@@ -23,7 +23,7 @@
 
 ## NAOqi SDK Setup
 *the following requires you to have created a worktree folder if not see above step*
-1. Download the naoqi-sdk from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
+1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 2. extract the folder and rename to **naoqi-sdk** \
    ***Location of this folder does not matter*** 
 3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
