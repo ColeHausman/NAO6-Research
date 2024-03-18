@@ -7,9 +7,9 @@
 2. Check your python install using `python --version`
 3. Install qibuild using `pip install qibuild --user`
 4. Run `qibuild config --wizard` if this errors restart your terminal
-  1. Cmake should be found automatically, if not specify the path
-  2. For Cmake generator specify **Unix Makefiles**
-  3. Dont specify an IDE, completely unecessary
+    1. Cmake should be found automatically, if not specify the path
+    2. For Cmake generator specify **Unix Makefiles**
+    3. Dont specify an IDE, completely unecessary
 
 ## Initializing Worktree
 1. Create an empty folder ex: /path/to/myWorktree
