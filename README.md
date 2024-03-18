@@ -42,31 +42,3 @@ https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-m
 #Deploying Code
 !!!Still yet to be tested !!!\
 `$ qibuild deploy <my_project> --url nao@nao.local:/home/nao/<my_project>`
-
-# CMake Setup
-## Here is an example CmakeLists.txt file to compile code with the sdk:
-[] - replace
-```cmake_minimum_required(VERSION 2.8)
-project([project name])
-
-find_package(qibuild)
-
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O3 -DBOOST_SYSTEM_NO_DEPRECATED")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -DBOOST_SYSTEM_NO_DEPRECATED")
-
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -std=c++11 -march=native -I -DBOOST_SYSTEM_NO_DEPRECATED")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -march=native -I -DBOOST_SYSTEM_NO_DEPRECATED")
-
-qi_create_bin([project name] "[main file name].cpp")
-
-target_include_directories([project name] PUBLIC "[path to sdk]/naoqi-sdk/include")
-```
-The `-DBOOST_SYSTEM_NO_DEPRECATED` flag is necessary for compilation
-
-`brew install openssl`\
-`brew install boost-python3`
-
-`brew upgrade openssl`\
-`brew link --force openssl`\
-`cmake .. -DQI_WITH_TESTS=OFF -DBOOST_ROOT=/opt/homebrew/opt/boost@1.76`
