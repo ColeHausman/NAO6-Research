@@ -19,7 +19,7 @@
 3. **NOTE: The folder should remain empty**
 
 ## NAOqi C++ SDK Setup
-*the following requires you to have created a worktree folder if not see above step*
+*the following requires you to have created a worktree folder as per previous section*
 1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 2. extract the folder and rename to **naoqi-sdk** \
    ***Location of this folder does not matter*** 
