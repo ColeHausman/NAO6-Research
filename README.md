@@ -1,6 +1,6 @@
-# NAO6-Research
+# C++ SDK Setup on MacOS 
 
-## C++ SDK Setup on MacOS 
+## CMake Environment Setup
 *simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
 
 1. Install CMake, the documentation says install from here: http://www.cmake.org/cmake/resources/software.html
@@ -21,7 +21,7 @@
 2. execute `qibuild init`
 3. **NOTE: The folder should remain empty**
 
-## NAOqi SDK Setup
+## NAOqi C++ SDK Setup
 *the following requires you to have created a worktree folder if not see above step*
 1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 2. extract the folder and rename to **naoqi-sdk** \
