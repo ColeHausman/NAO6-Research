@@ -32,7 +32,8 @@ Follow this tutorial to make sure everything was configured correctly: \
 
 ## Robot Settings Installation
 Download the application here and follow the GUI steps to install: \
-[https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.6/robot-settings-2.8.6.23-mac64-setup.dmg)
+[https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg) \
+The official download link does not work, this is the ONLY version that works on ARM-macs
 
 ## Deploying Code
 sadly not allowed\
