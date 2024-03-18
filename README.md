@@ -3,9 +3,7 @@
 ## CMake Environment Setup
 *simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
 
-1. Install CMake, the documentation says install from here: http://www.cmake.org/cmake/resources/software.html
-   but this creates path issues so use `brew install cmake` instead \
-   *requires homebrew https://brew.sh/*
+1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install from here as well: [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
 2. Check your python install using `python --version`
 3. Install qibuild using `pip install qibuild --user`
 4. Run `qibuild config --wizard` if this errors restart your terminal and confirm that the paths are saved in your bash_profile
