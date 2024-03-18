@@ -6,7 +6,7 @@
 1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install from here as well: [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
 2. Check your python install using `python --version`
 3. Install qibuild using `pip install qibuild --user`
-4. Run `qibuild config --wizard` if this errors restart your terminal and confirm that the paths are saved in your bash_profile
+4. Run `qibuild config --wizard` if this errors restart your terminal
 5. Cmake should be found automatically, if not specify the path
 6. For Cmake generator specify **Unix Makefiles**
 7. Dont specify an IDE, completely unecessary
