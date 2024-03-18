@@ -1,7 +1,8 @@
 # NAO6-Research
 
 ## C++ SDK Setup on MacOS 
-*simplified and corrected guide from https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide*
+*simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
+
 1. Install CMake, the documentation says install from here: http://www.cmake.org/cmake/resources/software.html
    but this creates path issues so use `brew install cmake` instead \
    *requires homebrew https://brew.sh/*
@@ -28,10 +29,11 @@
 3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
 4. cd into your worktree `/path/to/myWorktree`
 5. execute `qibuild add-config myconfig -t mytoolchain --default`
+6. Ensure `unset DYLD_LIBRARY_PATH`
 
 ## Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
-https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step
+[https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step](http://doc.aldebaran.com/2-5/dev/cpp/helloworld_auto.html)
 
 # ROBOT SETUP
 ## Robot Settings for MacOS
