@@ -14,7 +14,7 @@ Note: This guide is intended for ARM macos but should apply to Intel macs as wel
 
 ## Initializing Worktree
 1. Create an empty folder ex: /path/to/myWorktree
-2. execute `qibuild init`
+2. `cd` into your empty folder and execute `qibuild init`
 3. **NOTE: The folder should remain empty**
 
 ## NAOqi C++ SDK Setup
