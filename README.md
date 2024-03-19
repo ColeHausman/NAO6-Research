@@ -5,7 +5,7 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 ## CMake Environment Setup
 1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install CMake from here as well: \
 [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
-2. Check your python install using `python --version`
+2. Check your python install using `python --version` (python2.7 recommended, python3 usually works as well)
 3. Install qibuild using `pip install qibuild --user`
 4. Run `qibuild config --wizard` if this errors restart your terminal
     1. Cmake should be found automatically, if not specify the path
