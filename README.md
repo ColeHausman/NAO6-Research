@@ -1,5 +1,5 @@
 # C++ SDK Setup on MacOS 
-Note: This guide is intended for ARM macos but should apply to Intel macs as well
+Note: This guide is intended for ARM based macs but should apply to Intel x86 macs as well
 
 ## CMake Environment Setup
 *simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
