@@ -39,7 +39,9 @@ The official download link does not work, this is the ONLY version that works on
 ## Executable Permissions
 Once you have compiled your first program you will run into a permission error on macos when trying to run it, \
 in order to fix this you must disable Gatekeeper. Please make sure you know what you are doing prior to executing this command. \
-`sudo spctl --master-disable`
+`sudo spctl --master-disable` \
+Of course when you are finished working with the NAO it is recommended to re-enable Gatekeeper: \
+`sudo spctl --master-enable`
 
 ## API Reference Page
 Refer to the api page to get started (*note: most examples are written in python*) \
