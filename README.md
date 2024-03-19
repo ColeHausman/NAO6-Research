@@ -36,6 +36,11 @@ Download the application here and follow the GUI steps to install: \
 [https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg) \
 The official download link does not work, this is the ONLY version that works on ARM-macs
 
+## Executable Permissions
+Once you have compiled your first program you will run into a permission error on macos when trying to run it, \
+in order to fix this you must disable Gatekeeper. Please make sure you know what you are doing prior to executing this command. \
+`sudo spctl --master-disable`
+
 ## API Reference Page
 Refer to the api page to get started (*note: most examples are written in python*) \
 [http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html](http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html)
