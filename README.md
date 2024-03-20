@@ -20,8 +20,9 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 ## NAOqi C++ SDK Setup
 *the following requires you to have created a worktree folder as per previous section*
 1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
-2. extract the folder and rename to **naoqi-sdk** \
-   ***Location of this folder does not matter*** 
+2. extract the folder and rename to **naoqi-sdk** 
+   1. Create a new directory `NAO6-I` and copy `naoqi-sdk` into it
+   2. You should have `/path/to/NAO6-I/naoqi-sdk` this is the path you will use to link the SDK
 3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
 4. cd into your worktree `/path/to/myWorktree`
 5. execute `qibuild add-config myconfig -t mytoolchain --default`
