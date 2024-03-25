@@ -47,3 +47,15 @@ Of course when you are finished working with the NAO it is recommended to re-ena
 ## API Reference Page
 Refer to the api page to get started (*note: most examples are written in python*) \
 [http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html](http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html)
+
+# NAOqi Python 2.7 SDK Setup
+1. Download python 2.7 here: [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
+    1. Make sure to use Python from /usr/local/bin/python, not /usr/bin/python
+2. Download the python SDK here: [https://www.aldebaran.com/en/support/nao-6/downloads-softwares](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
+3. Execute the following or add them to your bash_profile:
+    1. `export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages`
+    2. `export QI_SDK_PREFIX=/path/to/python-sdk`
+4. To confirm setup:
+    1. `/usr/local/bin/python`
+    2. `import naoqi`
+    3. If there are no errors you are done
