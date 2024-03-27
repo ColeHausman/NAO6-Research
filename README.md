@@ -55,7 +55,10 @@ Refer to the api page to get started (*note: most examples are written in python
 3. Add the following to your zprofle or bash_profile (if you dont know which you are using use zprofile):
     1. `export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages`
     2. `export QI_SDK_PREFIX=/path/to/python-sdk`
-4. To confirm setup:
-    1. `/usr/local/bin/python`
-    2. `import naoqi`
-    3. If there are no errors you are done
+4. (Optional) Create a virtual environment
+    1. `virtualenv -p /usr/local/bin/python venv_py2`
+    2. `source venv_py2/bin/activate`
+    3. Now you can pip install libraries outside of naoqi
+5. To confirm setup:
+    1. `python` && `import naoqi`
+    2. If there are no errors you are done
