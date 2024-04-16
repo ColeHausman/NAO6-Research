@@ -49,7 +49,7 @@ qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml
 qibuild add-config myconfig -t mytoolchain --default
 ```
 
-6. Lastly run `qibuld configure`
+6. Lastly run `qibuild configure`
 
 ### Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
