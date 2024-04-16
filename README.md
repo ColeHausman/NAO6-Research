@@ -75,13 +75,15 @@ Of course when you are finished working with the NAO it is recommended to re-ena
    ```
    virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
     ```
+   *Note that you should also be able to use /usr/local/bin/python as your python`2.7.18` path \
+   \
    And activate your virtual environment using:
     ```
     source venv_py2.7/bin/activate
     ```
-5. To confirm setup:
+6. To confirm setup:
     1. `python` && `import naoqi`
-    2. If there are no errors you are done
+    2. If there are no errors you're done!
 
 ## Robot Settings Installation
 In order to connect to the NAO6 robot we need to install robot settings \
