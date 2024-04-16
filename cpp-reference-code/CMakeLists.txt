@@ -10,4 +10,4 @@ qi_create_bin(main "main.cpp")
 # Add a simple test:
 qi_create_test(test "test.cpp")
 
-qi_use_lib(main ALERROR ALPROXIES ALCOMMON) # required to use ALProxies
+qi_use_lib(main ALERROR ALCOMMON) # required to use ALProxies

@@ -1,13 +1,18 @@
 '''
-Example program to make the NAO6 say a desired phrase. The naoqi framework 
-abstracts away low level hardware interactions through the use of proxies
-which are used extensively when programming with naoqi. Proxies support
-event handling which is critical for more complex executions
+Example program to make the NAO6 say a desired phrase. We first create
+a text to speech proxy as well as an animated speech proxy. Note 
+that in the Python SDK, the ALBroker instance is automatically created 
+when you instantiate a proxy for the first time. 
 '''
 
 from naoqi import ALProxy, ALBroker
+import sys
 
-nao_IP = "nao.local" # nao.local == robot ip
+if len(sys.argv) != 2:
+    print("Usage: python script.py <NAO_IP>")
+    exit(1)
+
+nao_IP = sys.argv[1]
 nao_port = 9559
 
 tts = ALProxy("ALTextToSpeech", nao_IP, nao_port) # creates a proxy for text to speech
