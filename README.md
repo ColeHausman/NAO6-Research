@@ -1,8 +1,12 @@
-# C++ SDK Setup on MacOS 
+# Setting up naoqi SDKs on MacOS
+-[C++ SDK Guide](#C++-SDK-Setup-on-MacOS) \
+-[Python SDK Guide](#NAOqi-Python-2.7-SDK-Setup) (recommended if you have never programmed with the Nao before)
+
+## C++ SDK Setup on MacOS 
 Note: This guide is intended for ARM based macs but should apply to Intel x86 macs as well \
 *Simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
 
-## Environment Setup
+### Environment Setup
 1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install CMake from here as well: \
 [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
 2. Install python `2.7.18` [here](https://www.python.org/downloads/release/python-2718/), we will need to create a virtual environment to ensure qibuild functions properly
@@ -11,7 +15,7 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 ```
 virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
 ``` 
-*Note that depending on your installation, your python2.7 may be located elsewhere
+*Note that you should also be able to use `/usr/local/bin/python` as your python2.7.18 path
 
 5. Activate your virtual environment using: 
 ```
@@ -26,7 +30,7 @@ type `python --version` you should see 2.7.18
     3. Dont specify an IDE, completely unecessary
 8. Run `qibuild init` the folder should remain empty
 
-## C++ SDK and Toolchain Linking
+### C++ SDK and Toolchain Linking
 *the following requires you to have created a worktree folder as per previous section*
 1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 2. extract the folder and rename to **naoqi-sdk** 
@@ -45,27 +49,27 @@ qibuild add-config myconfig -t mytoolchain --default
 
 6. Lastly run `qibuld configure`
 
-## Confirm Setup
+### Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
 [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step](http://doc.aldebaran.com/2-5/dev/cpp/helloworld_auto.html)
 
-## Robot Settings Installation
+### Robot Settings Installation
 Download the application here and follow the GUI steps to install: \
 [https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg) \
 The official download link does not work, this is the ONLY version that works on ARM-macs
 
-## Executable Permissions
+### Executable Permissions
 Once you have compiled your first program you will run into a permission error on macos when trying to run it, \
 in order to fix this you must disable Gatekeeper. Please make sure you know what you are doing prior to executing this command. \
 `sudo spctl --master-disable` \
 Of course when you are finished working with the NAO it is recommended to re-enable Gatekeeper: \
 `sudo spctl --master-enable`
 
-## API Reference Page
+### API Reference Page
 Refer to the api page to get started (*note: most examples are written in python*) \
 [http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html](http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html)
 
-# NAOqi Python 2.7 SDK Setup
+## NAOqi Python 2.7 SDK Setup
 1. Download python 2.7 here: [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
     1. Make sure to use Python from /usr/local/bin/python, not /usr/bin/python
 2. Download the python SDK here: [https://www.aldebaran.com/en/support/nao-6/downloads-softwares](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
@@ -73,9 +77,8 @@ Refer to the api page to get started (*note: most examples are written in python
     1. `export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages`
     2. `export QI_SDK_PREFIX=/path/to/python-sdk`
 4. (Optional) Create a virtual environment
-    1. `virtualenv -p /usr/local/bin/python venv_py2`
-    2. `source venv_py2/bin/activate`
-    3. Now you can pip install libraries outside of naoqi
+    1. `virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7`
+    2. `source venv_py2.7/bin/activate`
 5. To confirm setup:
     1. `python` && `import naoqi`
     2. If there are no errors you are done
