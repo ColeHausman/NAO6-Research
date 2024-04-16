@@ -17,7 +17,7 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 ```
 virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
 ``` 
-*Note that you should also be able to use `/usr/local/bin/python` as your python2.7.18 path
+*Note that you should also be able to use `/usr/local/bin/python` as your python`2.7.18` path
 
 5. Activate your virtual environment using: 
 ```
@@ -55,11 +55,6 @@ qibuild add-config myconfig -t mytoolchain --default
 Follow this tutorial to make sure everything was configured correctly: \
 [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step](http://doc.aldebaran.com/2-5/dev/cpp/helloworld_auto.html)
 
-### Robot Settings Installation
-Download the application here and follow the GUI steps to install: \
-[https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg) \
-The official download link does not work, this is the ONLY version that works on ARM-macs
-
 ### Executable Permissions
 Once you have compiled your first program you will run into a permission error on macos when trying to run it, \
 in order to fix this you must disable Gatekeeper. Please make sure you know what you are doing prior to executing this command. \
@@ -67,20 +62,34 @@ in order to fix this you must disable Gatekeeper. Please make sure you know what
 Of course when you are finished working with the NAO it is recommended to re-enable Gatekeeper: \
 `sudo spctl --master-enable`
 
-### API Reference Page
-Refer to the api page to get started (*note: most examples are written in python*) \
-[http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html](http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html)
-
 ## NAOqi Python 2.7 SDK Setup
 1. Download python 2.7 here: [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
     1. Make sure to use Python from /usr/local/bin/python, not /usr/bin/python
 2. Download the python SDK here: [https://www.aldebaran.com/en/support/nao-6/downloads-softwares](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 3. Add the following to your zshrc or bash_profile (if you dont know which you are using use zshrc):
-    1. `export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages`
-    2. `export QI_SDK_PREFIX=/path/to/python-sdk`
-4. (Optional) Create a virtual environment
-    1. `virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7`
-    2. `source venv_py2.7/bin/activate`
+   ```
+   export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages
+   export QI_SDK_PREFIX=/path/to/python-sdk
+    ```
+4. (Optional but I cannot recommend it enough) Create a virtual environment
+   ```
+   virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
+    ```
+   And activate your virtual environment using:
+    ```
+    source venv_py2.7/bin/activate
+    ```
 5. To confirm setup:
     1. `python` && `import naoqi`
     2. If there are no errors you are done
+
+## Robot Settings Installation
+In order to connect to the NAO6 robot we need to install robot settings \
+Download the application here and follow the GUI steps to install: \
+[https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg](https://community-static.aldebaran.com/resources/2.8.5/robot-settings-2.8.5.10-mac64-setup.dmg) \
+The official download link does not work, this is the ONLY version that works on ARM-macs
+
+## API Reference Page
+Refer to the api page to get started (*note: most examples are written in python*) \
+When searching for documentation ensure that your are looking at naoqi version `2.8` \
+[http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html](http://doc.aldebaran.com/2-8/dev/libqi/api/cpp/index.html)
