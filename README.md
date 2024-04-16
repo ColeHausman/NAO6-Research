@@ -1,6 +1,8 @@
 # Setting up naoqi SDKs on MacOS
--[C++ SDK Guide](#c++-sdk-setup-on-macos)](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#c-sdk-setup-on-macos) \
--[Python SDK Guide](#naoqi-python-2.7-sdk-setup) (recommended if you have never programmed with the Nao before)
+-[C++ SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#c-sdk-setup-on-macos) \
+-[Python SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#naoqi-python-27-sdk-setup) (recommended if you have never programmed with the Nao before)
+
+
 
 ## C++ SDK Setup on MacOS 
 Note: This guide is intended for ARM based macs but should apply to Intel x86 macs as well \
