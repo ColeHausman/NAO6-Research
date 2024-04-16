@@ -13,7 +13,7 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install CMake from here as well: \
 [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
 2. Install python `2.7.18` [here](https://www.python.org/downloads/release/python-2718/), we will need to create a virtual environment to ensure qibuild functions properly
-3. Create an empty folder ex: /path/to/myWorktree and cd into your worktree directory
+3. Create an empty folder ex: /path/to/myWorktree and `cd` into your worktree directory
 4. Now create a virtual environment using python 2.7.18:
 ```
 virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
