@@ -1,14 +1,8 @@
-/*
- * Example program to make the NAO6 say a desired phrase. The naoqi framework 
- * abstracts away low level hardware interactions through the use of proxies
- * which are used extensively when programming with naoqi. Proxies support
- * event handling which is critical for more complex executions
- */
-
 #include <iostream>
 #include <alerror/alerror.h>
 #include <alproxies/altexttospeechproxy.h>
 #include <alcommon/albroker.h>
+#include <alcommon/albrokermanager.h>
 
 int main(int argc, char* argv[])
 {
@@ -28,7 +22,7 @@ int main(int argc, char* argv[])
         AL::ALBroker::createBroker("myBroker", "0.0.0.0", 0, argv[1], 9559);
         AL::ALTextToSpeechProxy tts("myBroker", 9559); // create a proxy for tts
         tts.say(phraseToSay);
-        AL::ALBroker::getBroker()->shutdown(); // Shutdown the broker after usage
+        AL::ALBrokerManager::getInstance()->killAllBroker(); // Shutdown the broker after usage
     }
     catch (const AL::ALError& e)
     {
@@ -38,4 +32,3 @@ int main(int argc, char* argv[])
 
     return 0;
 }
-
