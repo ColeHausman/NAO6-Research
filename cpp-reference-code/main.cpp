@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 
     try
     {
-        // Create your own broker
+        // Create a broker
         boost::shared_ptr<AL::ALBroker> broker;
         try
         {
@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
             return 1;
         }
 
-        // Obtain the proxy using the broker
+        // Obtain the proxy using the broker, while not required this is considered best practice
         AL::ALProxy proxy(broker, "ALTextToSpeech", 0, 0);
 
         // Call the say method on the proxy
