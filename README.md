@@ -1,10 +1,10 @@
 # Setting up naoqi SDKs on MacOS
 Note: This guide is intended for ARM based macs but should apply to Intel x86 macs as well
 ### Table of Contents
--[C++ SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#c-sdk-setup-on-macos) \
--[Python SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#naoqi-python-27-sdk-setup) (recommended if you have never programmed with the Nao before) \
+-[C++ SDK Guide](#c-sdk-setup-on-macos) \
+-[Python SDK Guide](#naoqi-python-27-sdk-setup) (recommended if you have never programmed with the Nao before) \
 -[Connecting via Robot Settings](#robot-settings-installation) \
--[API Reference](https://github.com/ColeHausman/NAO6-Research/tree/main#api-reference-page)
+-[API Reference](#api-reference-page)
 
 ## C++ SDK Setup on MacOS 
 *Simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
