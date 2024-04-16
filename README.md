@@ -67,7 +67,7 @@ Of course when you are finished working with the NAO it is recommended to re-ena
 1. Download python 2.7 here: [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
     1. Make sure to use Python from /usr/local/bin/python, not /usr/bin/python
 2. Download the python SDK here: [https://www.aldebaran.com/en/support/nao-6/downloads-softwares](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
-3. Add the following to your zshrc or bash_profile (if you dont know which you are using use zshrc):
+3. Add the following to your zshrc or bash_profile (if you dont know which you are using use zshrc) replace the paths with your actual path to the sdk:
    ```
    export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages
    export QI_SDK_PREFIX=/path/to/python-sdk
