@@ -3,7 +3,7 @@ Note: This guide is intended for ARM based macs but should apply to Intel x86 ma
 ### Table of Contents
 -[C++ SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#c-sdk-setup-on-macos) \
 -[Python SDK Guide](https://github.com/ColeHausman/NAO6-Research/tree/main?tab=readme-ov-file#naoqi-python-27-sdk-setup) (recommended if you have never programmed with the Nao before) \
--[Connecting via Robot Settings](https://github.com/ColeHausman/NAO6-Research/tree/main#robot-settings-installation) \
+-[Connecting via Robot Settings](#robot-settings-installation) \
 -[API Reference](https://github.com/ColeHausman/NAO6-Research/tree/main#api-reference-page)
 
 ## C++ SDK Setup on MacOS 
