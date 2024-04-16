@@ -2,31 +2,48 @@
 Note: This guide is intended for ARM based macs but should apply to Intel x86 macs as well \
 *Simplified and corrected guide from [https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-installation-guide](http://doc.aldebaran.com/2-5/dev/cpp/index.html)*
 
-## CMake Environment Setup
+## Environment Setup
 1. Install CMake, I recommend installing using `brew install cmake` (*requires homebrew [https://brew.sh](https://brew.sh)*) to avoid path issues but you can manually install CMake from here as well: \
 [http://www.cmake.org/cmake/resources/software.html](http://www.cmake.org/cmake/resources/software.html)
-2. Check your python install using `python --version` (DO NOT use a macos universal installer version of python)
-3. Install qibuild using `pip install qibuild --user`
-4. Run `qibuild config --wizard` if this errors restart your terminal
+2. Install python `2.7.18` [here](https://www.python.org/downloads/release/python-2718/), we will need to create a virtual environment to ensure qibuild functions properly
+3. Create an empty folder ex: /path/to/myWorktree and cd into your worktree directory
+4. Now create a virtual environment using python 2.7.18:
+```
+virtualenv -p /Library/Frameworks/Python.framework/Versions/2.7/bin/python2.7 venv_py2.7
+``` 
+*Note that depending on your installation, your python2.7 may be located elsewhere
+
+5. Activate your virtual environment using: 
+```
+source venv_py2.7/bin/activate
+``` 
+type `python --version` you should see 2.7.18
+
+6. Install qibuild using `pip install qibuild`
+7. Run `qibuild config --wizard` if this errors restart your terminal
     1. Cmake should be found automatically, if not specify the path
     2. For Cmake generator specify **Unix Makefiles**
     3. Dont specify an IDE, completely unecessary
+8. Run `qibuild init` the folder should remain empty
 
-## Initializing Worktree
-1. Create an empty folder ex: /path/to/myWorktree
-2. `cd` into your empty folder and execute `qibuild init`
-3. **NOTE: The folder should remain empty**
-
-## NAOqi C++ SDK Setup
+## C++ SDK and Toolchain Linking
 *the following requires you to have created a worktree folder as per previous section*
 1. Download the C++ SDK from [https://developer.softbankrobotics.com/nao6/downloads/nao6-downloads-mac](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
 2. extract the folder and rename to **naoqi-sdk** 
    1. Create a new directory `NAO6-I` and copy `naoqi-sdk` into it
    2. You should have `/path/to/NAO6-I/naoqi-sdk` this is the path you will use to link the SDK
-3. execute `qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml` to create a toolchain from the C++ SDK
-4. cd into your worktree `/path/to/myWorktree`
-5. execute `qibuild add-config myconfig -t mytoolchain --default`
-6. Ensure `unset DYLD_LIBRARY_PATH`
+3. execute the following command to create a toolchain from the C++ SDK:
+```
+qitoolchain create mytoolchain /path/to/naoqi-sdk/toolchain.xml
+```
+
+4. cd into your worktree `/path/to/myWorktree` (if not already there)
+5. Add your toolchain to your config using: 
+```
+qibuild add-config myconfig -t mytoolchain --default
+```
+
+6. Lastly run `qibuld configure`
 
 ## Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
@@ -52,7 +69,7 @@ Refer to the api page to get started (*note: most examples are written in python
 1. Download python 2.7 here: [https://www.python.org/downloads/release/python-2718/](https://www.python.org/downloads/release/python-2718/)
     1. Make sure to use Python from /usr/local/bin/python, not /usr/bin/python
 2. Download the python SDK here: [https://www.aldebaran.com/en/support/nao-6/downloads-softwares](https://www.aldebaran.com/en/support/nao-6/downloads-softwares)
-3. Add the following to your zprofle or bash_profile (if you dont know which you are using use zprofile):
+3. Add the following to your zshrc or bash_profile (if you dont know which you are using use zshrc):
     1. `export PYTHONPATH=${PYTHONPATH}:/path/to/python-sdk/lib/python2.7/site-packages`
     2. `export QI_SDK_PREFIX=/path/to/python-sdk`
 4. (Optional) Create a virtual environment
