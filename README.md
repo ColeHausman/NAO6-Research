@@ -54,10 +54,10 @@ qibuild add-config myconfig -t mytoolchain --default
 
 ### Confirm Setup
 Follow this tutorial to make sure everything was configured correctly: \
-[https://developer.softbankrobotics.com/nao6/naoqi-developer-guide/sdks/c-sdk/c-sdk-hello-world-step-step](http://doc.aldebaran.com/2-5/dev/cpp/helloworld_auto.html)
+[c-sdk-hello-world-step-step](http://doc.aldebaran.com/2-8/dev/cpp/helloworld_auto.html)
 
 ### Executable Permissions
-Once you have compiled your first program you will run into a permission error on macos when trying to run it, \
+Once you have compiled your first program you may run into a permission error on macos when trying to run it, \
 in order to fix this you must disable Gatekeeper. Please make sure you know what you are doing prior to executing this command. \
 `sudo spctl --master-disable` \
 Of course when you are finished working with the NAO it is recommended to re-enable Gatekeeper: \
